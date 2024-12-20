@@ -18,16 +18,12 @@ public class Notification {
     @Id
     private String id;
 
-    @NotBlank
     private String patientId;
 
-    @NotBlank
     private String message;
 
-    @FutureOrPresent
     private LocalDateTime scheduledTime;
 
-    @NotBlank
     private String status;
 
 }

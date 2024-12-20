@@ -29,7 +29,7 @@ public class NotificationController {
      * @return ResponseEntity with the created notification.
      */
     @PostMapping
-    public ResponseEntity<Notification> createNotification(@Valid @RequestBody Notification notification) {
+    public ResponseEntity<Notification> createNotification(@RequestBody Notification notification) {
         log.info("API call to create a new notification");
         Notification createdNotification = notificationService.createNotification(notification);
         return ResponseEntity.status(201).body(createdNotification);
